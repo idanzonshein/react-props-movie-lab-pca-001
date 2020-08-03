@@ -27,7 +27,7 @@ const posterMap = {
   'default': defaultPoster
 }
 
-export default class MovieCard extends Component {
+class MovieCard extends Component {
 
   render() {
     return (
@@ -39,5 +39,14 @@ export default class MovieCard extends Component {
     )
   }
 }
+
+MovieCard.defaultProps = {
+  title: "Unknown",
+  IMDBRating: null,
+  genres: ['No Genre(s) Found'],
+  poster: "default"
+}
+
+export default MovieCard;
 
 // Don't forget your default props!
